@@ -4,7 +4,7 @@ import {AlertContext} from "./context/alert/alertContext";
 const Alert = () => {
 const {alert, hide} = useContext(AlertContext)
 
-    if(!alert) {
+    if(!alert.visible) {
       return   null
     }
 
@@ -15,7 +15,7 @@ const {alert, hide} = useContext(AlertContext)
             <button type="button" className="btn-close"  aria-label="Close"
             onClick={hide}
             >
-                <span aria-idden="true"> &times;</span>
+                {/*<span aria-idden="true"> </span>*/}
             </button>
         </div>
     );
