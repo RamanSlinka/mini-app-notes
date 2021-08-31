@@ -10,6 +10,7 @@ import FirebaseState from "./components/context/firebase/FirebaseState";
 
 function App() {
     return (
+
         <FirebaseState>
             <AlertState>
                 <BrowserRouter>
@@ -24,6 +25,7 @@ function App() {
                 </BrowserRouter>
             </AlertState>
         </FirebaseState>
+
     );
 }
 

@@ -3,10 +3,10 @@ import {NavLink} from "react-router-dom";
 
 
 const NavBar = () => (
-    <nav className="navbar navbar-dark navbar-expand-lg bg-primary">
-        <div className="navbar-brand">Note App </div>
+    <nav className="navbar navbar-dark navbar-expand-lg bg-dark">
+        <div className="navbar-brand px-4" >Note App </div>
         <ul className="navbar-nav">
-            <li className="nav-item">
+            <li className="nav-item" >
                 <NavLink
                     className="nav-link"
                     to="/"

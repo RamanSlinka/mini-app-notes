@@ -10,19 +10,17 @@ const Form = () => {
 
     const submitHandler = (event) => {
         event.preventDefault()
-if(value.trim()){
-    firebase.addNote(value.trim()).then(() => {
-        alert.show(' Note was created', 'success')
-    }).catch(() => {
-        alert.show(' Ups... WTF ?...', 'danger')
-    })
+        if (value.trim()) {
+            firebase.addNote(value.trim()).then(() => {
+                alert.show(` Note was created. Don't forget to close "alert"  ` , 'success')
+            }).catch(() => {
+                alert.show(' Ups... WTF ?...', 'danger')
+            })
 
-    setValue('')
-} else {
-    alert.show(' Enter title note')
-}
-
-
+            setValue('')
+        } else {
+            alert.show(' Enter  note')
+        }
     }
     return (
         <form onSubmit={submitHandler}>
@@ -30,7 +28,7 @@ if(value.trim()){
                 <input
                     type="text"
                     className="form-control"
-                    placeholder="enter name note"
+                    placeholder="Enter  note"
                     value={value}
                     onChange={(event) =>
                         setValue(event.target.value)}

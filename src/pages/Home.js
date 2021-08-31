@@ -13,7 +13,7 @@ const Home = () => {
     }, [])
 
     return (
-        <Fragment>
+        <Fragment >
             <Form/>
             <hr/>
             {loading

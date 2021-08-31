@@ -4,7 +4,7 @@ import {firebaseReducer} from "./firebaseReducer";
 import {ADD_NOTE, FETCH_NOTES, REMOVE_NOTE, SHOW_LOADER} from "../types";
 import axios from "axios";
 
-const url = process.env.REACT_APP_DB_URL
+
 
 const FirebaseState = ({children}) => {
 
@@ -13,7 +13,8 @@ const FirebaseState = ({children}) => {
         loading: false
     }
 
-    const [state, dispatch] = useReducer(firebaseReducer, initialState)
+    const [state, dispatch] = useReducer(firebaseReducer,
+        initialState)
 
     const showLoader = () => {
         dispatch({type: SHOW_LOADER})
