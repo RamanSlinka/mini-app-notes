@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import Alert from "./components/Alert";
 import {AlertState} from "./components/context/alert/AlertState";
 import FirebaseState from "./components/context/firebase/FirebaseState";
+import Slider from "./pages/Slider";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
                     <NavBar/>
                     <div className="container pt-4">
                         <Alert/>
+                        <Slider/>
                         <Switch>
                             <Route path={'/'} exact component={Home}/>
                             <Route path={'/about'} exact component={About}/>
